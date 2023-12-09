@@ -10,4 +10,4 @@ RUN apk add --update --no-cache make wget gcc musl-dev linux-headers ca-certific
     rm -rf stress-ng_0.03.12.orig.tar.gz
 
 ENTRYPOINT ["/usr/bin/stress-ng"]
-CMD ["--help"]
+CMD ["--cpu", "2", "--timeout", "600s", "--metrics-brief"]
